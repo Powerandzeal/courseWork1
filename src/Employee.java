@@ -6,11 +6,11 @@ public class Employee {
     private int salaryOfPersonal;           // поля
     static int id;                          // поля
 
-    public Employee(String fullName,int department, int salaryOfPersonal, int id) {  //Констурктор
+    public Employee(String fullName,int department, int salaryOfPersonal) {  //Констурктор
         this.fullName = fullName;                               //Констурктор
         this.department = department;                           //Констурктор
         this.salaryOfPersonal = salaryOfPersonal;               //Констурктор
-        this.id = id;                                           //Констурктор
+        id++;                                          // Счетчик
 
     }
 
@@ -38,6 +38,7 @@ public class Employee {
         this.salaryOfPersonal = salaryOfPersonal;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -53,8 +54,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "fullName='" + fullName + '\'' +
+        return  "fullName='" + fullName + '\'' +
                 ", department=" + department +
                 ", salaryOfPersonal=" + salaryOfPersonal +
                 '}';

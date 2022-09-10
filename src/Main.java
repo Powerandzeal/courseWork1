@@ -60,20 +60,6 @@ public class Main {
         System.out.println();
     }
 
-
-
-
-        /*int averageSalary = salarySumInTheMonth / person.length;
-        System.out.println("Average Salary in the personal " + averageSalary);
-        System.out.println();*/
-
-        /*System.out.print("List of the person");
-        for (int f = 0; f < person.length; f++) {
-            System.out.println(person[f].getFullName());
-       }*/
-
-
-
     //5. Подсчитать среднее значение зарплат
     public static void averageSalary() {
         int averageSalary = salarySumInTheMonth / Employee.counter;

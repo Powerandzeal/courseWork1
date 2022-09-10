@@ -4,13 +4,14 @@ public class Employee {
     private String fullName;                // поля
     private int department;                 // поля
     private int salaryOfPersonal;           // поля
-    static int id;                          // поля
+   public static int counter;               // поле со счетчиком, которое будет увеличивать
+    private int id;                         //номер сотрудника, который будем брать из счетчика
 
     public Employee(String fullName,int department, int salaryOfPersonal) {  //Констурктор
         this.fullName = fullName;                               //Констурктор
         this.department = department;                           //Констурктор
         this.salaryOfPersonal = salaryOfPersonal;               //Констурктор
-        id++;                                          // Счетчик
+        int id = counter++;
 
     }
 

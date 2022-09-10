@@ -23,6 +23,7 @@ public class Main {
         personWithmaxSalaryAndMin();
         averageSalary();
         listOfTheFullName();
+        System.out.println(Employee.counter);
     }
 
     //Вывод списка работников
@@ -75,7 +76,7 @@ public class Main {
 
     //5. Подсчитать среднее значение зарплат
     public static void averageSalary() {
-        int averageSalary = salarySumInTheMonth / person.length;
+        int averageSalary = salarySumInTheMonth / Employee.counter;
         System.out.println("Average Salary in the personal " + averageSalary);
         System.out.println();
     }

@@ -3,7 +3,7 @@ public class Main {
     public static int salarySumInTheMonth = 0;
     public static int maxNum = 0;
     public static int minNum = 1000000;
-
+    public static int counterEmployeeWhoGetsSalary;// считает сколько людей получает зп
 
 
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class Main {
 
         getListOfPerson();
         getSumSalaryForPerson();
-        personWithmaxSalaryAndMin();
+        personWithMaxSalaryAndMin();
         averageSalary();
         listOfTheFullName();
         System.out.println(Employee.counter);
@@ -34,17 +34,22 @@ public class Main {
         System.out.println();
     }
 
-    //2  Вывод суммы зарплат для всех сотррудников в месяц
+    //2  Вывод суммы затрат на зарплаты для всех сотррудников в месяц
     public static void getSumSalaryForPerson() {
+
         for (int e = 0; e < person.length; e++) {
-            salarySumInTheMonth = salarySumInTheMonth + person[e].getSalaryOfPersonal();
+            if (person[e].getSalaryOfPersonal() != 0) {
+                salarySumInTheMonth = salarySumInTheMonth + person[e].getSalaryOfPersonal();
+                counterEmployeeWhoGetsSalary++;
+            }
         }
         System.out.println("Salary on the Person in the month " + salarySumInTheMonth);
 
     }
+
     //3. Найти сотрудника с минимальной зарплатой.
     //4. Найти сотрудника с максимальной зарплатой.
-    public static void personWithmaxSalaryAndMin() {
+    public static void personWithMaxSalaryAndMin() {
 
         for (int b = 0; b < person.length; b++) {
             if (person[b].getSalaryOfPersonal() > maxNum) {
@@ -62,7 +67,7 @@ public class Main {
 
     //5. Подсчитать среднее значение зарплат
     public static void averageSalary() {
-        int averageSalary = salarySumInTheMonth / Employee.counter;
+        int averageSalary = salarySumInTheMonth / counterEmployeeWhoGetsSalary;
         System.out.println("Average Salary in the personal " + averageSalary);
         System.out.println();
     }

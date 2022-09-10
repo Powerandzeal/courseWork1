@@ -13,6 +13,7 @@ public class Main {
         person [7] = new Employee("Lebedev Atrem Eygenevich",3,58000);
         person [8] = new Employee("Ivanova Daria Petrovich",1,13000);
         person [9] = new Employee("Shurow Vasiliy Genadevich",5,23000);
+
         for (int i = 0; i < person.length; i++) { //Вывод списка работников
             System.out.println(person[i]);
         }
@@ -51,10 +52,8 @@ public class Main {
             System.out.println(person[f].getFullName());
         }
 
-
-
-
     }
+
     /*public static void getArrageSalary () {
         System.out.println(person[0]);
 

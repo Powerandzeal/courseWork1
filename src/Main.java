@@ -5,6 +5,7 @@ public class Main {
     public static int minNum = 1000000;
 
 
+
     public static void main(String[] args) {
         person[0] = new Employee("Ivavanov Ivan Ivanovich", 2, 56000);
         person[1] = new Employee("Alexandrow Oleg Evgenievich", 1, 43000);

@@ -3,7 +3,7 @@ public class Main {
     public static int salarySumInTheMonth = 0;
     public static int maxNum = 0;
     public static int minNum = 1000000;
-    public static int counterEmployeeWhoGetsSalary;// считает сколько людей получает зп
+   // public static int counterEmployeeWhoGetsSalary;// считает сколько людей получает зп
 
 
     public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class Main {
         personWithMaxSalaryAndMin();
         averageSalary();
         listOfTheFullName();
-        System.out.println(Employee.counter);
+
     }
 
     //Вывод списка работников
@@ -40,7 +40,7 @@ public class Main {
         for (int e = 0; e < person.length; e++) {
             if (person[e].getSalaryOfPersonal() != 0) {
                 salarySumInTheMonth = salarySumInTheMonth + person[e].getSalaryOfPersonal();
-                counterEmployeeWhoGetsSalary++;
+                // counterEmployeeWhoGetsSalary++;
             }
         }
         System.out.println("Salary on the Person in the month " + salarySumInTheMonth);
@@ -67,9 +67,17 @@ public class Main {
 
     //5. Подсчитать среднее значение зарплат
     public static void averageSalary() {
-        int averageSalary = salarySumInTheMonth / counterEmployeeWhoGetsSalary;
-        System.out.println("Average Salary in the personal " + averageSalary);
+        int people = 0;
+        int sumOfMoney = 0;
+        for (int g = 0; g < person.length; g++) {
+            if (person[g].getSalaryOfPersonal() != 0) {
+                 sumOfMoney= sumOfMoney + person[g].getSalaryOfPersonal();
+            } people++;
+        }
+        System.out.println("Average Salary in the personal "+ sumOfMoney/people );
         System.out.println();
+        //int averageSalary;
+        //System.out.println();
     }
 
     //6. Получить Ф. И. О. всех сотрудников (вывести в консоль).

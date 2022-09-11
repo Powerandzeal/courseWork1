@@ -4,7 +4,7 @@ public class Employee {
     private String fullName;                // поля
     private int department;                 // поля
     private int salaryOfPersonal;           // поля
-   public static int counter;               // поле со счетчиком, которое будет увеличивать
+   private static int counter;               // поле со счетчиком, которое будет увеличивать
     private int id;                         //номер сотрудника, который будем брать из счетчика
 
     public Employee(String fullName,int department, int salaryOfPersonal) {  //Констурктор

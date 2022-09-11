@@ -72,7 +72,8 @@ public class Main {
         for (int g = 0; g < person.length; g++) {
             if (person[g].getSalaryOfPersonal() != 0) {
                  sumOfMoney= sumOfMoney + person[g].getSalaryOfPersonal();
-            } people++;
+                people++;
+            }
         }
         System.out.println("Average Salary in the personal "+ sumOfMoney/people );
         System.out.println();
